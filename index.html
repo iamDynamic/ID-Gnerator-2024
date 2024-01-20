@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Plastine Random ID Generator ||Ali Ibrahim</title>
+    <link rel="shortcut icon" href="/Favicon.jpeg" type="image/x-icon">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    nav{
+        background-color: #262626;
+        color: #fff;
+        padding: 15px;
+        font-size: 30px;
+        text-align: center
+    }
+    .div{
+        text-transform: capitalize;
+        margin-top: 180px;
+        margin-left: 200px;
+    }
+    section,div{
+        margin-top: 20px;
+    }
+    #Submit{
+        background-color: #262626;
+        color: #fff;
+        height: 20px;
+    }
+    #text{
+        border: solid #262626;
+        color: #000;
+        height: 30px;
+        margin-top: -4px;
+        padding: 5px;
+        width: 300px;
+    }
+    #Submit{
+        height: fit-content;
+        padding: 6px;
+    }
+    a{
+        text-decoration: none;
+        color: #c0c0c0;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: #c02;
+    }
+    @media (max-width:598px) {
+        .div{
+            margin-left: -0.1px;
+        }
+    }
+</style>
+<body>
+    
+<nav>
+    <h1>ID Generator 2024</h1>
+</nav>
+
+<div class="div">
+    <h1>Best ID Generator For 2024 </h1>
+     <section style="display: flex;">
+        <div id="text"></div>
+        <input type="submit" onclick="Generate()" id="Submit" value="Press To Generate">
+        
+     </section>
+     <h1>
+        this website about in every click  <br> he generate a random id for more apps  
+         <a href="https://all-project-apps.vercel.app/">go to play store</a>
+    </h1>
+</div>
+
+
+
+</body>
+<script>
+    var body = document.querySelector("body")
+    var text = document.querySelector("#text")
+
+    
+    async function generate(){
+            var ApiKey = `https://randomuser.me/api/`
+            var RFetch = await fetch(ApiKey)
+            var Res = await RFetch.json()
+            var GetID = Res.results[0].login.uuid
+            console.log(`Free Plastine Random ID Generator ||Ali Ibrahim`)
+            console.log(`ID Random : ${GetID}`)
+            text.innerHTML = GetID
+    }
+    var Generate = ()=>{
+        generate()
+         
+    }
+
+</script>
+</html>
